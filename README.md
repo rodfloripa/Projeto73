@@ -1,5 +1,5 @@
 
-# Inferência de LLM no Sage,aker usando Rust
+# Inferência de LLM no Sagemaker usando Rust
 
 <div align="justify">
 
