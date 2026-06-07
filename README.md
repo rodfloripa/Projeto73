@@ -67,6 +67,10 @@ sagemaker-rust-llm/
 ├── Cargo.toml
 ├── Makefile
 ├── Dockerfile
+├── .dockerignore
+├── .gitignore
+├── deploy.py
+├── payload.json
 ├── model/
 │   └── Meta-Llama-3-8B-Instruct.Q4_K_M.gguf
 └── src/
