@@ -260,8 +260,9 @@ Efetue a requisição diretamente ao endpoint ativo no SageMaker utilizando o co
 ```bash
 aws sagemaker-runtime invoke-endpoint \
     --endpoint-name rust-llm-endpoint \
-    --body file://payload.json \
+    --body fileb://payload.json \
     --content-type application/json \
+    --region us-east-1 \
     output.json
 ```
 
