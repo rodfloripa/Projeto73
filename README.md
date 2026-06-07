@@ -210,6 +210,23 @@ Nomeie a política como <code>PassRoleToSageMakerPolicy</code> e conclua a cria�
 </div>
 
 ### Passo 7: Deploy da Infraestrutura no Amazon SageMaker
+Pré-requisitos e Instalação
+
+Para executar o script de deploy (`deploy.py`) e interagir com a API da AWS, você precisa instalar o SDK oficial da AWS para Python (`boto3`).
+
+## Usando Ambiente Virtual (Recomendado)
+Esta é a prática recomendada para isolar as dependências do projeto sem afetar o Python global do seu sistema operacional:
+
+```bash
+# 1. Criar o ambiente virtual
+python3 -m venv venv
+
+# 2. Ativar o ambiente virtual
+source venv/bin/activate
+
+# 3. Instalar o pacote necessário
+pip install boto3
+```
 
 <div align="justify">
 Com as permissões configuradas e a imagem no ECR, inicialize o provisionamento na AWS:
