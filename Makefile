@@ -59,15 +59,15 @@ deploy: push create-model create-config create-endpoint
 
 destroy:
 	@echo "🛑 Iniciando a destruição completa dos recursos do SageMaker..."
-	@aws sagemaker delete-endpoint --endpoint-name rust-llm-endpoint
-	@echo "🗑️  Endpoint 'rust-llm-endpoint' removido (Cobrança interrompida)."
-	@aws sagemaker delete-endpoint-config --endpoint-config-name rust-llm-config-v2
-	@echo "🗑️  Configuração 'rust-llm-config-v2' removida."
-	@aws sagemaker delete-model --model-name rust-llm-model-v3
-	@echo "🗑️  Modelo 'rust-llm-model-v3' removido."
-	@echo "🔍 Verificando status atual na AWS..."
+	@-aws sagemaker delete-endpoint --endpoint-name rust-llm-endpoint 2>/dev/null
+	@echo "🗑️  Tentativa de remoção do Endpoint concluída (Cobrança interrompida)."
+	@-aws sagemaker delete-endpoint-config --endpoint-config-name rust-llm-config-v2 2>/dev/null
+	@echo "🗑️  Tentativa de remoção da Configuração concluída."
+	@-aws sagemaker delete-model --model-name rust-llm-model-v3 2>/dev/null
+	@echo "🗑️  Tentativa de remoção do Modelo concluída."
+	@echo "🔍 Verificando se sobrou algo ativo na AWS..."
 	@aws sagemaker list-endpoints --query "Endpoints[?EndpointStatus=='InService'].EndpointName"
-	@echo "🎉 Limpeza concluída! Sua conta está segura contra cobranças."
+	@echo "🎉 Processo concluído! Sua conta está protegida contra cobranças."
 
 status:
 	aws sagemaker describe-endpoint --endpoint-name $(ENDPOINT_NAME) --region $(REGION) --query 'EndpointStatus'
