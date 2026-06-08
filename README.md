@@ -295,6 +295,8 @@ Para visualizar a resposta gerada pelo modelo Llama 3 via Rust, execute:
 cat output.json
 ```
 
+ATENÇÃO!!!!
+Não esqueça de dar o comando make deploy para remover a API e evitar custos indesejados na AWS
 ---
 
 ## 7. Principais Blocos de Código e Configurações
