@@ -297,7 +297,7 @@ cat output.json
 
 <div align="justify">
 ATENÇÃO!!!!
-Não esqueça de dar o comando make deploy para remover a API e evitar custos indesejados na AWS
+Não esqueça de dar o comando make destroy para remover a API e evitar custos indesejados na AWS
 </div>
 ---
 
