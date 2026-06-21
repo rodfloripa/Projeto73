@@ -2,12 +2,13 @@
 
 ## 1. Visão Geral
 
+<div align="justify">
 Utilizar **Rust + Axum + Candle** para servir modelos **GGUF** dentro do Amazon SageMaker é uma abordagem totalmente válida, especialmente quando o objetivo é reduzir custos, minimizar latência ou executar inferência em ambientes CPU-only.
 
 Embora a AWS normalmente recomende soluções como **LMI**, **vLLM** ou **Text Generation Inference (TGI)**, uma stack baseada em Rust oferece vantagens significativas em simplicidade operacional, controle de recursos e eficiência de execução.
 
 A principal diferença é que essa arquitetura não foi projetada para maximizar throughput em larga escala, mas sim para entregar inferência eficiente com baixo consumo de recursos.
-
+</div>
 
 ---
 
