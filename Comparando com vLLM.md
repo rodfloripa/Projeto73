@@ -8,6 +8,8 @@ Embora a AWS normalmente recomende soluções como **LMI**, **vLLM** ou **Text G
 
 A principal diferença é que essa arquitetura não foi projetada para maximizar throughput em larga escala, mas sim para entregar inferência eficiente com baixo consumo de recursos.
 
+[Veja aqui vantagens e desvantagens do projeto e comparação com vLLM](https://github.com/rodfloripa/Projeto73/blob/main/Comparando%20com%20vLLM.md)
+
 ---
 
 # 2. O Que Você Ganha com Rust + Axum + Candle
