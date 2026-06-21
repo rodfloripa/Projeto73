@@ -6,6 +6,7 @@
 Deploy de uma API de inferência de altíssima performance para Large Language Models (LLMs) utilizando Rust, Axum, Candle, Docker, Amazon ECR e Amazon SageMaker. Este projeto demonstra a construção de uma infraestrutura de MLOps completa para servir modelos GGUF em produção, desde a criação da imagem Docker até a disponibilização de um endpoint escalável e robusto na AWS.
 </div>
 
+[Veja aqui vantagens e desvantagens do projeto e comparação com vLLM](https://github.com/rodfloripa/Projeto73/blob/main/Comparando%20com%20vLLM.md)
 ---
 
 ## 1. Objetivos
