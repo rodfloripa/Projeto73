@@ -65,6 +65,10 @@ destroy:
 	@echo "🗑️  Tentativa de remoção da Configuração concluída."
 	@-aws sagemaker delete-model --model-name rust-llm-model-v3 2>/dev/null
 	@echo "🗑️  Tentativa de remoção do Modelo concluída."
+	@-aws ecr batch-delete-image --repository-name $(REPO_NAME) --image-ids imageTag=$(IMAGE_TAG) --region $(REGION) 2>/dev/null
+	@echo "🗑️  Imagens do ECR removidas."
+	@-aws ecr delete-repository --repository-name $(REPO_NAME) --force --region $(REGION) 2>/dev/null
+	@echo "🗑️  Repositório ECR removido."
 	@echo "🔍 Verificando se sobrou algo ativo na AWS..."
 	@aws sagemaker list-endpoints --query "Endpoints[?EndpointStatus=='InService'].EndpointName"
 	@echo "🎉 Processo concluído! Sua conta está protegida contra cobranças."
